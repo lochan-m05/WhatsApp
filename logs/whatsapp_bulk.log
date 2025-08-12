@@ -1,0 +1,24 @@
+2025-08-13 00:03:41 | INFO | WhatsApp Automation initialized
+2025-08-13 00:04:04 | ERROR | Failed to setup WebDriver: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 136.0.7103.113 with binary path /usr/bin/chromium; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x55b6de6ce4e3 <unknown>
+#1 0x55b6de3fdc76 <unknown>
+#2 0x55b6de42b04a <unknown>
+#3 0x55b6de4264a1 <unknown>
+#4 0x55b6de423029 <unknown>
+#5 0x55b6de461ccc <unknown>
+#6 0x55b6de46147f <unknown>
+#7 0x55b6de458de3 <unknown>
+#8 0x55b6de42e2dd <unknown>
+#9 0x55b6de42f34e <unknown>
+#10 0x55b6de68e3e4 <unknown>
+#11 0x55b6de6923d7 <unknown>
+#12 0x55b6de69cb20 <unknown>
+#13 0x55b6de693023 <unknown>
+#14 0x55b6de6611aa <unknown>
+#15 0x55b6de6b76b8 <unknown>
+#16 0x55b6de6b7847 <unknown>
+#17 0x55b6de6c7243 <unknown>
+#18 0x7f215d9b2b7b <unknown>
+

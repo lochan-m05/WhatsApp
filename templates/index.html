@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <h4 class="card-title">{{ stats.total_students }}</h4>
+                        <p class="card-text">Total Students</p>
+                    </div>
+                    <i class="fas fa-users fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <h4 class="card-title">{{ stats.active_jobs }}</h4>
+                        <p class="card-text">Active Jobs</p>
+                    </div>
+                    <i class="fas fa-clock fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <h4 class="card-title">{{ stats.completed_jobs }}</h4>
+                        <p class="card-text">Completed Jobs</p>
+                    </div>
+                    <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body text-center">
+                <a href="{{ url_for('send_message_form') }}" class="btn btn-light btn-lg">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-history"></i> Recent Jobs</h5>
+            </div>
+            <div class="card-body">
+                {% if stats.recent_jobs %}
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Job ID</th>
+                                    <th>Type</th>
+                                    <th>Company</th>
+                                    <th>Status</th>
+                                    <th>Created</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for job in stats.recent_jobs %}
+                                <tr>
+                                    <td>{{ job.job_id }}</td>
+                                    <td>{{ job.type }}</td>
+                                    <td>{{ job.get('company', 'N/A') }}</td>
+                                    <td>
+                                        <span class="badge bg-{{ 'success' if job.status == 'active' else 'secondary' }}">
+                                            {{ job.status }}
+                                        </span>
+                                    </td>
+                                    <td>{{ job.created_at[:19] }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <p class="text-muted">No jobs found</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

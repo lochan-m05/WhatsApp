@@ -1,0 +1,14 @@
+{
+  "placement_alert": {
+    "template": "\n\ud83c\udfaf *Placement Opportunity Alert* \ud83c\udfaf\n\nDear {name},\n\nWe have an exciting placement opportunity that matches your profile:\n\n*Company:* {company}\n*Position:* {position}\n*Package:* {package}\n*Location:* {location}\n*Last Date to Apply:* {last_date}\n\n*Requirements:*\n{requirements}\n\nPlease reply with \"INTERESTED\" if you want to apply for this position.\n\nBest regards,\nPlacement Cell\n",
+    "description": "General placement opportunity alert"
+  },
+  "reminder": {
+    "template": "\n\ud83d\udd14 *Placement Reminder* \ud83d\udd14\n\nDear {name},\n\nThis is a reminder about the placement opportunity:\n\n*Company:* {company}\n*Position:* {position}\n*Application Deadline:* {last_date}\n\n\u23f0 Only {days_remaining} days left to apply!\n\nDon't miss this opportunity. Apply now!\n\nBest regards,\nPlacement Cell\n                ",
+    "description": "Reminder message for upcoming deadlines"
+  },
+  "interview_schedule": {
+    "template": "\n\ud83d\udcc5 *Interview Scheduled* \ud83d\udcc5\n\nDear {name},\n\nYour interview has been scheduled for:\n\n*Company:* {company}\n*Position:* {position}\n*Date:* {interview_date}\n*Time:* {interview_time}\n*Mode:* {interview_mode}\n*Venue/Link:* {interview_details}\n\nPlease be prepared and join 10 minutes early.\n\nAll the best!\n\nPlacement Cell\n                ",
+    "description": "Interview scheduling notification"
+  }
+}
